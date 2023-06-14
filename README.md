@@ -9,16 +9,25 @@ Here's why you should use our dataset:
 
 ### Training & Testing Details
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+The Object Detection / Instance Segmentation Models are list bellow. **Bold** represent Instance Segmentation. The training and testing logs are all in log folder.
 
+* **Mask R-CNN-X152**
+* **Mask R-CNN-X101**
+* **Mask R-CNN-101**
+* **CenterMask-V99**
+* **CenterMask-V57**
+* YOLOV5-l
+* YOLOV5-l6
+* YOLOV5-x
+* YOLOV5-x6
+* PPYOLO
 * Mask R-CNN-X152
-* Mask R-CNN-X101
-* Mask R-CNN-X152
-* Mask R-CNN-X152
-* Mask R-CNN-X152
-* Mask R-CNN-X152
-* Mask R-CNN-X152
-* Mask R-CNN-X152
+* HRNET
+* TOOD
+* Cascade R-CNN
+* Sparse R-CNN
+* Res2Net
+* FCOS
 
 <!-- LICENSE -->
 ## License & Citation
@@ -37,4 +46,4 @@ Email - r10521801@ntu.edu.tw
 
 Email - xxx@ntu.edu.tw   
 
-LAB Website: [EORSLAB]()
+LAB Website: [EORSLAB](https://yalunstsai.wixsite.com/eorslab-ntu)
