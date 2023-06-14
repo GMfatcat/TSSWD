@@ -20,21 +20,21 @@ Here's why you should use our dataset:
 
 ### Training & Testing Details
 
-The Object Detection / Instance Segmentation Models are list bellow. **Bold** represent Instance Segmentation. The training and testing logs are all in log folder.    
+The Object Detection / Instance Segmentation Models are list bellow. **Bold** represent Instance Segmentation. Training and testing params set in log file.    
 | Models | GPU | Notes |
 |---|---|---|
 | Mask R-CNN, YOLOV5, CenterMask | Nvidia Tesla V100 32G, Nvida RTX 2080Ti 12G | Provide by [NTUCE-NCREE AI Research Center](http://www.aiengineer.tw/) |
 | Rest of them | Nvidia GTX 1060 6G | Home PC |
 
 * **Mask R-CNN-X152** -- [log](/logfile/x152/cout_x152_ship_test.txt)
-* **Mask R-CNN-X101** -- [log]()
-* **Mask R-CNN-101** -- [log]()
-* **CenterMask-V99** -- [log]()
-* **CenterMask-V57** -- [log]()
-* YOLOV5-l -- [log]()
-* YOLOV5-l6 -- [log]()
-* YOLOV5-x -- [log]()
-* YOLOV5-x6 -- [log]()
+* **Mask R-CNN-X101** -- [log](/logfile/x101/cout_x101_tsswd.txt)
+* **Mask R-CNN-101** -- [log](/logfile/r101/cout_r101_tsswd.txt)
+* **CenterMask-V99** -- [log](/logfile/v99/cout_v99_tsswd.txt)
+* **CenterMask-V57** -- [log](/logfile/v57/cout_v57_tsswd.txt)
+* YOLOV5-l -- [log](/logfile/yolov5-l)
+* YOLOV5-l6 -- [log](/logfile/x152)
+* YOLOV5-x -- [log](/logfile/x152)
+* YOLOV5-x6 -- [log](/logfile/x152)
 * PPYOLO
 * HRNET
 * TOOD
