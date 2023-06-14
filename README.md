@@ -7,6 +7,17 @@ Here's why you should use our dataset:
 * We only use **Sentinel-1** as our image source, no mixed-source satellite, which is more common practice in Remote Sensing Field.
 * The ship size in our dataset is smaller than previous dataset, which means it's more challenging :smile:
 
+### Dataset Details
+
+|          Satellite          |   Mode   |   Images   |  Ships  |     Size    | Resolution |
+|:---------------------------:|:--------:|:----------:|:-------:|:-----------:|:----------:|
+|          Sentinel-1         |    IW    |    2904    |   8255  |   800x800   |    10 m    |
+|       Annotation Type       | Training | Validation | Testing | Images & Label |  Buoy Data |
+| COCO / VOC /YOLOV4 / YOLOV5 |   2324   |     290    |   290   |             |            |
+
+
+
+
 ### Training & Testing Details
 
 The Object Detection / Instance Segmentation Models are list bellow. **Bold** represent Instance Segmentation. The training and testing logs are all in log folder.    
@@ -25,7 +36,6 @@ The Object Detection / Instance Segmentation Models are list bellow. **Bold** re
 * YOLOV5-x
 * YOLOV5-x6
 * PPYOLO
-* Mask R-CNN-X152
 * HRNET
 * TOOD
 * Cascade R-CNN
