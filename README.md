@@ -26,15 +26,15 @@ The Object Detection / Instance Segmentation Models are list bellow. **Bold** re
 | Mask R-CNN, YOLOV5, CenterMask | Nvidia Tesla V100 32G, Nvida RTX 2080Ti 12G | Provide by [NTUCE-NCREE AI Research Center](http://www.aiengineer.tw/) |
 | Rest of them | Nvidia GTX 1060 6G | Home PC |
 
-* **Mask R-CNN-X152**
-* **Mask R-CNN-X101**
-* **Mask R-CNN-101**
-* **CenterMask-V99**
-* **CenterMask-V57**
-* YOLOV5-l
-* YOLOV5-l6
-* YOLOV5-x
-* YOLOV5-x6
+* **Mask R-CNN-X152** -- [log](/logfile/x152/cout_x152_ship_test.txt)
+* **Mask R-CNN-X101** -- [log]()
+* **Mask R-CNN-101** -- [log]()
+* **CenterMask-V99** -- [log]()
+* **CenterMask-V57** -- [log]()
+* YOLOV5-l -- [log]()
+* YOLOV5-l6 -- [log]()
+* YOLOV5-x -- [log]()
+* YOLOV5-x6 -- [log]()
 * PPYOLO
 * HRNET
 * TOOD
