@@ -48,10 +48,19 @@ The Object Detection / Instance Segmentation Models are list bellow. **Bold** re
 
 Distributed under the MIT License. See `LICENSE` for more information.    
 
-If our work is helpful to your research, please cite us    
-
-`cite = {}`
-
+If our work is helpful to your research, use this bibtex to cite this repository:
+```
+@article{TSSWD,
+  title={TSSWD: Taiwan SAR-based Ship Detection and Weather Dataset},
+  author={Shang-Fong, Yang and YaLun, Tsai},
+  year={2023},
+  publisher={},
+  journal={},
+  volume={},
+  number={},
+  pages={},
+}
+```
 
 <!-- CONTACT -->
 ## Contact
