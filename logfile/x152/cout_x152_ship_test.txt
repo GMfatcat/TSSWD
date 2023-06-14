@@ -1,0 +1,1936 @@
+
+============================ Messages from Goddess ============================
+ * Job starting from: Tue Jan 3 21:35:23 CST 2023
+ * Job ID           : 36151
+ * Job name         : detectron_ship_mrcnn_x152_tsswd_ship_test
+ * Job partition    : v100-32g
+ * Nodes            : 1
+ * Cores            : 4
+ * Working directory: ~/fatcat/TSSWD_training
+===============================================================================
+
+Loading python/3.8.10-gpu
+  Loading requirement: cuda/11.2
+==== Registering DataSet ====
+==== Registering CWB TEST DataSet ====
+==== Registering WMO TEST DataSet ====
+==== Registering Wind TEST DataSet ====
+==== Registering Size DataSet ====
+==== Finish Registering ====
+==== Modifying Config ====
+==== Config been Modified ====
+====Start Evaluation====
+====Start Evaluation on Val Set====
+[32m[01/03 21:35:45 d2.data.datasets.coco]: [0mLoaded 290 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/val/coco/annotation/val.json
+[32m[01/03 21:35:45 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 743          |
+|            |              |[0m
+[32m[01/03 21:35:45 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:35:45 d2.data.common]: [0mSerializing 290 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:35:45 d2.data.common]: [0mSerialized dataset takes 0.19 MiB
+[32m[01/03 21:35:45 d2.evaluation.evaluator]: [0mStart inference on 290 batches
+[32m[01/03 21:35:46 d2.evaluation.evaluator]: [0mInference done 11/290. Dataloading: 0.0007 s/iter. Inference: 0.0789 s/iter. Eval: 0.0066 s/iter. Total: 0.0862 s/iter. ETA=0:00:24
+[32m[01/03 21:35:51 d2.evaluation.evaluator]: [0mInference done 72/290. Dataloading: 0.0010 s/iter. Inference: 0.0789 s/iter. Eval: 0.0031 s/iter. Total: 0.0831 s/iter. ETA=0:00:18
+[32m[01/03 21:35:56 d2.evaluation.evaluator]: [0mInference done 132/290. Dataloading: 0.0010 s/iter. Inference: 0.0789 s/iter. Eval: 0.0033 s/iter. Total: 0.0833 s/iter. ETA=0:00:13
+[32m[01/03 21:36:01 d2.evaluation.evaluator]: [0mInference done 189/290. Dataloading: 0.0011 s/iter. Inference: 0.0790 s/iter. Eval: 0.0048 s/iter. Total: 0.0849 s/iter. ETA=0:00:08
+[32m[01/03 21:36:06 d2.evaluation.evaluator]: [0mInference done 248/290. Dataloading: 0.0011 s/iter. Inference: 0.0790 s/iter. Eval: 0.0051 s/iter. Total: 0.0852 s/iter. ETA=0:00:03
+[32m[01/03 21:36:10 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:24.456846 (0.085813 s / iter per device, on 1 devices)
+[32m[01/03 21:36:10 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:22 (0.079070 s / iter per device, on 1 devices)
+[32m[01/03 21:36:10 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:36:10 d2.evaluation.coco_evaluation]: [0mSaving results to ./evaluation_output_x152/coco_instances_results.json
+[32m[01/03 21:36:10 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:36:10 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:36:10 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.02 seconds.
+[32m[01/03 21:36:10 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:36:10 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.493
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.927
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.477
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.493
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.228
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.495
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.555
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.555
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:36:10 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 49.254 | 92.692 | 47.659 | 49.254 |  nan  |  nan  |
+[32m[01/03 21:36:10 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.01s)
+creating index...
+index created!
+[32m[01/03 21:36:10 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:36:10 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.03 seconds.
+[32m[01/03 21:36:10 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:36:10 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.448
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.928
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.371
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.448
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.206
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.455
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.509
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.509
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:36:10 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 44.796 | 92.784 | 37.122 | 44.796 |  nan  |  nan  |
+[32m[01/03 21:36:10 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 49.25351488754723, 'AP50': 92.6916495002149, 'AP75': 47.65878421600041, 'APs': 49.25351488754723, 'APm': nan, 'APl': nan}), ('segm', {'AP': 44.79597523034881, 'AP50': 92.78355497039679, 'AP75': 37.12154258067631, 'APs': 44.79597523034881, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Test Set====
+[32m[01/03 21:36:11 d2.data.datasets.coco]: [0mLoaded 290 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/test.json
+[32m[01/03 21:36:11 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 752          |
+|            |              |[0m
+[32m[01/03 21:36:11 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:36:11 d2.data.common]: [0mSerializing 290 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:36:11 d2.data.common]: [0mSerialized dataset takes 0.20 MiB
+[32m[01/03 21:36:11 d2.evaluation.evaluator]: [0mStart inference on 290 batches
+[32m[01/03 21:36:12 d2.evaluation.evaluator]: [0mInference done 11/290. Dataloading: 0.0011 s/iter. Inference: 0.0821 s/iter. Eval: 0.0043 s/iter. Total: 0.0875 s/iter. ETA=0:00:24
+[32m[01/03 21:36:17 d2.evaluation.evaluator]: [0mInference done 68/290. Dataloading: 0.0013 s/iter. Inference: 0.0822 s/iter. Eval: 0.0044 s/iter. Total: 0.0880 s/iter. ETA=0:00:19
+[32m[01/03 21:36:22 d2.evaluation.evaluator]: [0mInference done 126/290. Dataloading: 0.0012 s/iter. Inference: 0.0812 s/iter. Eval: 0.0052 s/iter. Total: 0.0877 s/iter. ETA=0:00:14
+[32m[01/03 21:36:27 d2.evaluation.evaluator]: [0mInference done 185/290. Dataloading: 0.0012 s/iter. Inference: 0.0805 s/iter. Eval: 0.0051 s/iter. Total: 0.0868 s/iter. ETA=0:00:09
+[32m[01/03 21:36:32 d2.evaluation.evaluator]: [0mInference done 242/290. Dataloading: 0.0011 s/iter. Inference: 0.0801 s/iter. Eval: 0.0060 s/iter. Total: 0.0873 s/iter. ETA=0:00:04
+[32m[01/03 21:36:36 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:24.776750 (0.086936 s / iter per device, on 1 devices)
+[32m[01/03 21:36:36 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:22 (0.079905 s / iter per device, on 1 devices)
+[32m[01/03 21:36:36 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:36:36 d2.evaluation.coco_evaluation]: [0mSaving results to ./evaluation_output_x152/coco_instances_results.json
+[32m[01/03 21:36:36 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:36:36 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:36:36 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.02 seconds.
+[32m[01/03 21:36:36 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:36:36 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.512
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.931
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.506
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.512
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.241
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.574
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.574
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:36:36 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 51.211 | 93.061 | 50.602 | 51.211 |  nan  |  nan  |
+[32m[01/03 21:36:36 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.01s)
+creating index...
+index created!
+[32m[01/03 21:36:36 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:36:36 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.03 seconds.
+[32m[01/03 21:36:36 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:36:36 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.465
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.930
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.400
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.465
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.220
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.502
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.529
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.529
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:36:36 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 46.512 | 93.040 | 39.962 | 46.512 |  nan  |  nan  |
+[32m[01/03 21:36:36 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 51.21091623513199, 'AP50': 93.06066125172809, 'AP75': 50.60221543054752, 'APs': 51.21091623513199, 'APm': nan, 'APl': nan}), ('segm', {'AP': 46.51176413464396, 'AP50': 93.0399394730976, 'AP75': 39.961971182164504, 'APs': 46.51176413464396, 'APm': nan, 'APl': nan})])
+====Start Evaluation on CWB L Test Set====
+[32m[01/03 21:36:36 d2.data.datasets.coco]: [0mLoaded 73 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/L_test.json
+[32m[01/03 21:36:36 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 203          |
+|            |              |[0m
+[32m[01/03 21:36:36 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:36:36 d2.data.common]: [0mSerializing 73 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:36:36 d2.data.common]: [0mSerialized dataset takes 0.05 MiB
+[32m[01/03 21:36:36 d2.evaluation.evaluator]: [0mStart inference on 73 batches
+[32m[01/03 21:36:38 d2.evaluation.evaluator]: [0mInference done 11/73. Dataloading: 0.0010 s/iter. Inference: 0.0820 s/iter. Eval: 0.0027 s/iter. Total: 0.0856 s/iter. ETA=0:00:05
+[32m[01/03 21:36:43 d2.evaluation.evaluator]: [0mInference done 66/73. Dataloading: 0.0013 s/iter. Inference: 0.0819 s/iter. Eval: 0.0082 s/iter. Total: 0.0915 s/iter. ETA=0:00:00
+[32m[01/03 21:36:43 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:06.221527 (0.091493 s / iter per device, on 1 devices)
+[32m[01/03 21:36:43 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:05 (0.081613 s / iter per device, on 1 devices)
+[32m[01/03 21:36:43 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:36:43 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/CWB/L/coco_instances_results.json
+[32m[01/03 21:36:44 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:36:44 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:36:44 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:36:44 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:36:44 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.590
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.982
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.684
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.590
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.240
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.640
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.650
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.650
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:36:44 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 58.962 | 98.241 | 68.428 | 58.962 |  nan  |  nan  |
+[32m[01/03 21:36:44 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:36:44 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:36:44 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:36:44 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:36:44 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.531
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.983
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.511
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.531
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.216
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.583
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.593
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.593
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:36:44 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 53.145 | 98.297 | 51.097 | 53.145 |  nan  |  nan  |
+[32m[01/03 21:36:44 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 58.961966035698055, 'AP50': 98.24132498145644, 'AP75': 68.42774855576495, 'APs': 58.961966035698055, 'APm': nan, 'APl': nan}), ('segm', {'AP': 53.14496918901534, 'AP50': 98.2974653956032, 'AP75': 51.09655339743401, 'APs': 53.14496918901534, 'APm': nan, 'APl': nan})])
+====Start Evaluation on CWB M Test Set====
+[32m[01/03 21:36:44 d2.data.datasets.coco]: [0mLoaded 73 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/M_test.json
+[32m[01/03 21:36:44 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 176          |
+|            |              |[0m
+[32m[01/03 21:36:44 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:36:44 d2.data.common]: [0mSerializing 73 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:36:44 d2.data.common]: [0mSerialized dataset takes 0.05 MiB
+[32m[01/03 21:36:44 d2.evaluation.evaluator]: [0mStart inference on 73 batches
+[32m[01/03 21:36:48 d2.evaluation.evaluator]: [0mInference done 48/73. Dataloading: 0.0010 s/iter. Inference: 0.0790 s/iter. Eval: 0.0042 s/iter. Total: 0.0842 s/iter. ETA=0:00:02
+[32m[01/03 21:36:50 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:05.875954 (0.086411 s / iter per device, on 1 devices)
+[32m[01/03 21:36:50 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:05 (0.079008 s / iter per device, on 1 devices)
+[32m[01/03 21:36:50 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:36:50 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/CWB/M/coco_instances_results.json
+[32m[01/03 21:36:50 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:36:50 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:36:50 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:36:50 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:36:50 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.535
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.941
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.529
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.535
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.272
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.589
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.593
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.593
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:36:50 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 53.459 | 94.110 | 52.918 | 53.459 |  nan  |  nan  |
+[32m[01/03 21:36:50 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:36:50 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:36:50 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:36:50 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:36:50 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.941
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.406
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.241
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.541
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.546
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.546
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:36:50 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 48.820 | 94.110 | 40.568 | 48.820 |  nan  |  nan  |
+[32m[01/03 21:36:50 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 53.45861327516944, 'AP50': 94.10980928029886, 'AP75': 52.917802304450255, 'APs': 53.45861327516944, 'APm': nan, 'APl': nan}), ('segm', {'AP': 48.8198464018423, 'AP50': 94.10980928029886, 'AP75': 40.568480845822776, 'APs': 48.8198464018423, 'APm': nan, 'APl': nan})])
+====Start Evaluation on CWB S Test Set====
+[32m[01/03 21:36:50 d2.data.datasets.coco]: [0mLoaded 72 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/S_test.json
+[32m[01/03 21:36:50 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 183          |
+|            |              |[0m
+[32m[01/03 21:36:50 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:36:50 d2.data.common]: [0mSerializing 72 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:36:50 d2.data.common]: [0mSerialized dataset takes 0.05 MiB
+[32m[01/03 21:36:50 d2.evaluation.evaluator]: [0mStart inference on 72 batches
+[32m[01/03 21:36:53 d2.evaluation.evaluator]: [0mInference done 29/72. Dataloading: 0.0010 s/iter. Inference: 0.0790 s/iter. Eval: 0.0042 s/iter. Total: 0.0842 s/iter. ETA=0:00:03
+[32m[01/03 21:36:57 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:05.800362 (0.086573 s / iter per device, on 1 devices)
+[32m[01/03 21:36:57 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:05 (0.078927 s / iter per device, on 1 devices)
+[32m[01/03 21:36:57 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:36:57 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/CWB/S/coco_instances_results.json
+[32m[01/03 21:36:57 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:36:57 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:36:57 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:36:57 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:36:57 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.465
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.916
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.395
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.465
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.237
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.484
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.522
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.522
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:36:57 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 46.519 | 91.599 | 39.521 | 46.519 |  nan  |  nan  |
+[32m[01/03 21:36:57 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:36:57 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:36:57 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:36:57 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:36:57 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.425
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.904
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.367
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.425
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.224
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.453
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.489
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.489
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:36:57 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 42.490 | 90.385 | 36.719 | 42.490 |  nan  |  nan  |
+[32m[01/03 21:36:57 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 46.51940321628753, 'AP50': 91.59893424430791, 'AP75': 39.52124061273067, 'APs': 46.51940321628753, 'APm': nan, 'APl': nan}), ('segm', {'AP': 42.490477077732294, 'AP50': 90.38450409490675, 'AP75': 36.71927951355919, 'APs': 42.490477077732294, 'APm': nan, 'APl': nan})])
+====Start Evaluation on CWB sw Test Set====
+[32m[01/03 21:36:57 d2.data.datasets.coco]: [0mLoaded 72 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/sw_test.json
+[32m[01/03 21:36:57 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 190          |
+|            |              |[0m
+[32m[01/03 21:36:57 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:36:57 d2.data.common]: [0mSerializing 72 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:36:57 d2.data.common]: [0mSerialized dataset takes 0.05 MiB
+[32m[01/03 21:36:57 d2.evaluation.evaluator]: [0mStart inference on 72 batches
+[32m[01/03 21:36:58 d2.evaluation.evaluator]: [0mInference done 11/72. Dataloading: 0.0008 s/iter. Inference: 0.0788 s/iter. Eval: 0.0026 s/iter. Total: 0.0822 s/iter. ETA=0:00:05
+[32m[01/03 21:37:03 d2.evaluation.evaluator]: [0mInference done 69/72. Dataloading: 0.0011 s/iter. Inference: 0.0790 s/iter. Eval: 0.0058 s/iter. Total: 0.0858 s/iter. ETA=0:00:00
+[32m[01/03 21:37:03 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:05.829260 (0.087004 s / iter per device, on 1 devices)
+[32m[01/03 21:37:03 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:05 (0.078946 s / iter per device, on 1 devices)
+[32m[01/03 21:37:03 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:03 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/CWB/sw/coco_instances_results.json
+[32m[01/03 21:37:03 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:03 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:03 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:03 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:03 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.463
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.896
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.425
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.463
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.216
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.468
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.526
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.526
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:03 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 46.310 | 89.579 | 42.502 | 46.310 |  nan  |  nan  |
+[32m[01/03 21:37:03 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:03 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:03 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:03 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:03 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.419
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.897
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.329
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.419
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.201
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.426
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.483
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.483
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:03 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 41.921 | 89.710 | 32.916 | 41.921 |  nan  |  nan  |
+[32m[01/03 21:37:03 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 46.3100665544986, 'AP50': 89.57897811578212, 'AP75': 42.501915529165416, 'APs': 46.3100665544986, 'APm': nan, 'APl': nan}), ('segm', {'AP': 41.920961171934465, 'AP50': 89.71002113641686, 'AP75': 32.916497582262814, 'APs': 41.920961171934465, 'APm': nan, 'APl': nan})])
+====Start Evaluation on WMO 0 Test Set====
+[32m[01/03 21:37:03 d2.data.datasets.coco]: [0mLoaded 1 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/WMO_0_test.json
+[32m[01/03 21:37:03 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 13           |
+|            |              |[0m
+[32m[01/03 21:37:03 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:03 d2.data.common]: [0mSerializing 1 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:03 d2.data.common]: [0mSerialized dataset takes 0.00 MiB
+[32m[01/03 21:37:03 d2.evaluation.evaluator]: [0mStart inference on 1 batches
+[32m[01/03 21:37:04 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:00.187386 (0.187386 s / iter per device, on 1 devices)
+[32m[01/03 21:37:04 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:00 (0.087798 s / iter per device, on 1 devices)
+[32m[01/03 21:37:04 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:04 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/WMO/WMO_0/coco_instances_results.json
+[32m[01/03 21:37:04 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:04 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:04 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:04 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:04 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.554
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.624
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.554
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.038
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.546
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.608
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.608
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:04 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50   |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:-------:|:------:|:------:|:-----:|:-----:|
+| 55.404 | 100.000 | 62.376 | 55.404 |  nan  |  nan  |
+[32m[01/03 21:37:04 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:04 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:04 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:04 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:04 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.557
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.573
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.557
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.046
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.492
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:04 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50   |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:-------:|:------:|:------:|:-----:|:-----:|
+| 55.699 | 100.000 | 57.284 | 55.699 |  nan  |  nan  |
+[32m[01/03 21:37:04 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 55.4044173648134, 'AP50': 100.0, 'AP75': 62.376237623762385, 'APs': 55.4044173648134, 'APm': nan, 'APl': nan}), ('segm', {'AP': 55.6986577778657, 'AP50': 100.0, 'AP75': 57.284299858557276, 'APs': 55.6986577778657, 'APm': nan, 'APl': nan})])
+====Start Evaluation on WMO 2 Test Set====
+[32m[01/03 21:37:04 d2.data.datasets.coco]: [0mLoaded 62 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/WMO_2_test.json
+[32m[01/03 21:37:04 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 160          |
+|            |              |[0m
+[32m[01/03 21:37:04 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:04 d2.data.common]: [0mSerializing 62 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:04 d2.data.common]: [0mSerialized dataset takes 0.04 MiB
+[32m[01/03 21:37:04 d2.evaluation.evaluator]: [0mStart inference on 62 batches
+[32m[01/03 21:37:08 d2.evaluation.evaluator]: [0mInference done 44/62. Dataloading: 0.0012 s/iter. Inference: 0.0814 s/iter. Eval: 0.0073 s/iter. Total: 0.0901 s/iter. ETA=0:00:01
+[32m[01/03 21:37:10 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:05.094381 (0.089375 s / iter per device, on 1 devices)
+[32m[01/03 21:37:10 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:04 (0.080629 s / iter per device, on 1 devices)
+[32m[01/03 21:37:10 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:10 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/WMO/WMO_2/coco_instances_results.json
+[32m[01/03 21:37:10 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:10 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:10 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:10 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:10 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.457
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.875
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.419
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.457
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.224
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.455
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.519
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.519
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:10 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 45.715 | 87.510 | 41.867 | 45.715 |  nan  |  nan  |
+[32m[01/03 21:37:10 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:10 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:10 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:10 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:10 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.410
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.886
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.324
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.410
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.208
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.416
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.476
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.476
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:10 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 41.018 | 88.583 | 32.370 | 41.018 |  nan  |  nan  |
+[32m[01/03 21:37:10 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 45.7151248718828, 'AP50': 87.50995535305601, 'AP75': 41.8665359976179, 'APs': 45.7151248718828, 'APm': nan, 'APl': nan}), ('segm', {'AP': 41.01813150828569, 'AP50': 88.58324071278018, 'AP75': 32.3702752920994, 'APs': 41.01813150828569, 'APm': nan, 'APl': nan})])
+====Start Evaluation on WMO 3 Test Set====
+[32m[01/03 21:37:10 d2.data.datasets.coco]: [0mLoaded 63 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/WMO_3_test.json
+[32m[01/03 21:37:10 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 158          |
+|            |              |[0m
+[32m[01/03 21:37:10 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:10 d2.data.common]: [0mSerializing 63 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:10 d2.data.common]: [0mSerialized dataset takes 0.04 MiB
+[32m[01/03 21:37:10 d2.evaluation.evaluator]: [0mStart inference on 63 batches
+[32m[01/03 21:37:13 d2.evaluation.evaluator]: [0mInference done 36/63. Dataloading: 0.0010 s/iter. Inference: 0.0798 s/iter. Eval: 0.0066 s/iter. Total: 0.0875 s/iter. ETA=0:00:02
+[32m[01/03 21:37:15 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:05.100236 (0.087935 s / iter per device, on 1 devices)
+[32m[01/03 21:37:15 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:04 (0.079800 s / iter per device, on 1 devices)
+[32m[01/03 21:37:15 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:15 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/WMO/WMO_3/coco_instances_results.json
+[32m[01/03 21:37:15 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:15 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:15 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:15 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:15 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.442
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.909
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.331
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.442
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.227
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.461
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.504
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.504
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:15 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 44.188 | 90.880 | 33.122 | 44.188 |  nan  |  nan  |
+[32m[01/03 21:37:15 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:15 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:15 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:15 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:15 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.407
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.894
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.318
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.407
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.218
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.428
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.470
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.470
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:15 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 40.661 | 89.391 | 31.849 | 40.661 |  nan  |  nan  |
+[32m[01/03 21:37:15 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 44.18778380154016, 'AP50': 90.87992764780107, 'AP75': 33.12188501179387, 'APs': 44.18778380154016, 'APm': nan, 'APl': nan}), ('segm', {'AP': 40.66055020416186, 'AP50': 89.39131602443476, 'AP75': 31.84851260836029, 'APs': 40.66055020416186, 'APm': nan, 'APl': nan})])
+====Start Evaluation on WMO 4 Test Set====
+[32m[01/03 21:37:15 d2.data.datasets.coco]: [0mLoaded 23 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/WMO_4_test.json
+[32m[01/03 21:37:15 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 61           |
+|            |              |[0m
+[32m[01/03 21:37:15 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:15 d2.data.common]: [0mSerializing 23 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:15 d2.data.common]: [0mSerialized dataset takes 0.02 MiB
+[32m[01/03 21:37:15 d2.evaluation.evaluator]: [0mStart inference on 23 batches
+[32m[01/03 21:37:18 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:01.623791 (0.090211 s / iter per device, on 1 devices)
+[32m[01/03 21:37:18 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:01 (0.079567 s / iter per device, on 1 devices)
+[32m[01/03 21:37:18 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:18 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/WMO/WMO_4/coco_instances_results.json
+[32m[01/03 21:37:18 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:18 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:18 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:18 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:18 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.545
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.964
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.591
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.545
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:18 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 54.540 | 96.442 | 59.062 | 54.540 |  nan  |  nan  |
+[32m[01/03 21:37:18 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:18 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:18 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:18 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:18 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.964
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.428
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.221
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.549
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.549
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.549
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:18 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 49.401 | 96.442 | 42.829 | 49.401 |  nan  |  nan  |
+[32m[01/03 21:37:18 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 54.53967984876118, 'AP50': 96.44230192861014, 'AP75': 59.061675207114774, 'APs': 54.53967984876118, 'APm': nan, 'APl': nan}), ('segm', {'AP': 49.40062052586553, 'AP50': 96.44230192861014, 'AP75': 42.82921038661844, 'APs': 49.40062052586553, 'APm': nan, 'APl': nan})])
+====Start Evaluation on WMO 5 Test Set====
+[32m[01/03 21:37:18 d2.data.datasets.coco]: [0mLoaded 66 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/WMO_5_test.json
+[32m[01/03 21:37:18 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:18 d2.data.common]: [0mSerializing 66 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:18 d2.data.common]: [0mSerialized dataset takes 0.05 MiB
+[32m[01/03 21:37:18 d2.evaluation.evaluator]: [0mStart inference on 66 batches
+[32m[01/03 21:37:19 d2.evaluation.evaluator]: [0mInference done 11/66. Dataloading: 0.0008 s/iter. Inference: 0.0786 s/iter. Eval: 0.0020 s/iter. Total: 0.0815 s/iter. ETA=0:00:04
+[32m[01/03 21:37:24 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:05.331509 (0.087402 s / iter per device, on 1 devices)
+[32m[01/03 21:37:24 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:04 (0.078934 s / iter per device, on 1 devices)
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/WMO/WMO_5/coco_instances_results.json
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.588
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.974
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.681
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.588
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.248
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.639
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.651
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.651
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 58.821 | 97.356 | 68.111 | 58.821 |  nan  |  nan  |
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.538
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.974
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.546
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.538
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.226
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.597
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.597
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 53.785 | 97.421 | 54.620 | 53.785 |  nan  |  nan  |
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 58.82099524388645, 'AP50': 97.35596620862778, 'AP75': 68.11141929502452, 'APs': 58.82099524388645, 'APm': nan, 'APl': nan}), ('segm', {'AP': 53.785344086330674, 'AP50': 97.42111501077935, 'AP75': 54.61993087764245, 'APs': 53.785344086330674, 'APm': nan, 'APl': nan})])
+====Start Evaluation on WMO 6 Test Set====
+[32m[01/03 21:37:24 d2.data.datasets.coco]: [0mLoaded 2 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/WMO_6_test.json
+[32m[01/03 21:37:24 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 8            |
+|            |              |[0m
+[32m[01/03 21:37:24 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:24 d2.data.common]: [0mSerializing 2 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:24 d2.data.common]: [0mSerialized dataset takes 0.00 MiB
+[32m[01/03 21:37:24 d2.evaluation.evaluator]: [0mStart inference on 2 batches
+[32m[01/03 21:37:24 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:00.149109 (0.149109 s / iter per device, on 1 devices)
+[32m[01/03 21:37:24 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:00 (0.079053 s / iter per device, on 1 devices)
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/WMO/WMO_6/coco_instances_results.json
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.762
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.762
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.225
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.775
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.775
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.775
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50   |  AP75   |  APs   |  APm  |  APl  |
+|:------:|:-------:|:-------:|:------:|:-----:|:-----:|
+| 76.163 | 100.000 | 100.000 | 76.163 |  nan  |  nan  |
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.574
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.691
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.574
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.175
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.625
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.625
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.625
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50   |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:-------:|:------:|:------:|:-----:|:-----:|
+| 57.401 | 100.000 | 69.059 | 57.401 |  nan  |  nan  |
+[32m[01/03 21:37:24 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 76.16336633663366, 'AP50': 100.0, 'AP75': 100.0, 'APs': 76.16336633663366, 'APm': nan, 'APl': nan}), ('segm', {'AP': 57.400990099009896, 'AP50': 100.0, 'AP75': 69.05940594059405, 'APs': 57.400990099009896, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wind 1 Test Set====
+[32m[01/03 21:37:24 d2.data.datasets.coco]: [0mLoaded 21 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/Wind_1.json
+[32m[01/03 21:37:24 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 32           |
+|            |              |[0m
+[32m[01/03 21:37:24 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:24 d2.data.common]: [0mSerializing 21 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:24 d2.data.common]: [0mSerialized dataset takes 0.01 MiB
+[32m[01/03 21:37:24 d2.evaluation.evaluator]: [0mStart inference on 21 batches
+[32m[01/03 21:37:26 d2.evaluation.evaluator]: [0mInference done 11/21. Dataloading: 0.0007 s/iter. Inference: 0.0788 s/iter. Eval: 0.0040 s/iter. Total: 0.0835 s/iter. ETA=0:00:00
+[32m[01/03 21:37:27 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:01.470796 (0.091925 s / iter per device, on 1 devices)
+[32m[01/03 21:37:27 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:01 (0.078798 s / iter per device, on 1 devices)
+[32m[01/03 21:37:27 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:27 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Wind/Wind_1/coco_instances_results.json
+[32m[01/03 21:37:27 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:27 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:27 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:27 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:27 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.501
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.976
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.434
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.501
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.375
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:27 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 50.098 | 97.584 | 43.394 | 50.098 |  nan  |  nan  |
+[32m[01/03 21:37:27 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:27 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:27 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:27 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:27 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.469
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.976
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.448
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.469
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.353
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.531
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.531
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.531
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:27 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 46.934 | 97.584 | 44.849 | 46.934 |  nan  |  nan  |
+[32m[01/03 21:37:27 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 50.09790777021694, 'AP50': 97.58407602546853, 'AP75': 43.394295473503384, 'APs': 50.09790777021694, 'APm': nan, 'APl': nan}), ('segm', {'AP': 46.93375151588183, 'AP50': 97.58407602546853, 'AP75': 44.84934207706485, 'APs': 46.93375151588183, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wind 2 Test Set====
+[32m[01/03 21:37:27 d2.data.datasets.coco]: [0mLoaded 54 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/Wind_2.json
+[32m[01/03 21:37:27 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 127          |
+|            |              |[0m
+[32m[01/03 21:37:27 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:27 d2.data.common]: [0mSerializing 54 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:27 d2.data.common]: [0mSerialized dataset takes 0.03 MiB
+[32m[01/03 21:37:27 d2.evaluation.evaluator]: [0mStart inference on 54 batches
+[32m[01/03 21:37:31 d2.evaluation.evaluator]: [0mInference done 41/54. Dataloading: 0.0013 s/iter. Inference: 0.0824 s/iter. Eval: 0.0074 s/iter. Total: 0.0912 s/iter. ETA=0:00:01
+[32m[01/03 21:37:32 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:04.519844 (0.092242 s / iter per device, on 1 devices)
+[32m[01/03 21:37:32 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:04 (0.082490 s / iter per device, on 1 devices)
+[32m[01/03 21:37:32 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:32 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Wind/Wind_2/coco_instances_results.json
+[32m[01/03 21:37:32 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:32 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:32 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:32 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:32 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.524
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.959
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.544
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.524
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.259
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.583
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.590
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.590
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:32 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 52.391 | 95.865 | 54.433 | 52.391 |  nan  |  nan  |
+[32m[01/03 21:37:32 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:32 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:32 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:32 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:32 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.959
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.450
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.552
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.562
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.562
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:32 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 49.359 | 95.865 | 44.963 | 49.359 |  nan  |  nan  |
+[32m[01/03 21:37:32 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 52.39057518608819, 'AP50': 95.86523111566065, 'AP75': 54.4327181492567, 'APs': 52.39057518608819, 'APm': nan, 'APl': nan}), ('segm', {'AP': 49.3586364230507, 'AP50': 95.86523111566065, 'AP75': 44.962837293213575, 'APs': 49.3586364230507, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wind 3 Test Set====
+[32m[01/03 21:37:32 d2.data.datasets.coco]: [0mLoaded 50 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/Wind_3.json
+[32m[01/03 21:37:32 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 120          |
+|            |              |[0m
+[32m[01/03 21:37:32 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:32 d2.data.common]: [0mSerializing 50 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:32 d2.data.common]: [0mSerialized dataset takes 0.03 MiB
+[32m[01/03 21:37:32 d2.evaluation.evaluator]: [0mStart inference on 50 batches
+[32m[01/03 21:37:36 d2.evaluation.evaluator]: [0mInference done 39/50. Dataloading: 0.0010 s/iter. Inference: 0.0790 s/iter. Eval: 0.0051 s/iter. Total: 0.0852 s/iter. ETA=0:00:00
+[32m[01/03 21:37:37 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:03.899344 (0.086652 s / iter per device, on 1 devices)
+[32m[01/03 21:37:37 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:03 (0.079012 s / iter per device, on 1 devices)
+[32m[01/03 21:37:37 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:37 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Wind/Wind_3/coco_instances_results.json
+[32m[01/03 21:37:37 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:37 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:37 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:37 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:37 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.449
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.869
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.411
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.449
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.256
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.489
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.508
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.508
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:37 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 44.907 | 86.879 | 41.146 | 44.907 |  nan  |  nan  |
+[32m[01/03 21:37:37 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:37 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:37 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:37 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:37 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.407
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.872
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.313
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.407
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.232
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.442
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.460
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.460
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:37 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 40.690 | 87.192 | 31.270 | 40.690 |  nan  |  nan  |
+[32m[01/03 21:37:37 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 44.90702095727417, 'AP50': 86.87882465027647, 'AP75': 41.14627652201819, 'APs': 44.90702095727417, 'APm': nan, 'APl': nan}), ('segm', {'AP': 40.69008456578468, 'AP50': 87.19209511413708, 'AP75': 31.270416032228248, 'APs': 40.69008456578468, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wind 4 Test Set====
+[32m[01/03 21:37:37 d2.data.datasets.coco]: [0mLoaded 20 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/Wind_4.json
+[32m[01/03 21:37:37 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 73           |
+|            |              |[0m
+[32m[01/03 21:37:37 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:37 d2.data.common]: [0mSerializing 20 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:37 d2.data.common]: [0mSerialized dataset takes 0.02 MiB
+[32m[01/03 21:37:37 d2.evaluation.evaluator]: [0mStart inference on 20 batches
+[32m[01/03 21:37:39 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:01.394248 (0.092950 s / iter per device, on 1 devices)
+[32m[01/03 21:37:39 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:01 (0.079058 s / iter per device, on 1 devices)
+[32m[01/03 21:37:39 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:39 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Wind/Wind_4/coco_instances_results.json
+[32m[01/03 21:37:39 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:39 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:39 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:39 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:39 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.480
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.910
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.386
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.480
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.170
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.447
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.534
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.534
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:39 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 48.020 | 90.957 | 38.584 | 48.020 |  nan  |  nan  |
+[32m[01/03 21:37:39 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:39 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:39 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:39 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:39 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.437
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.910
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.376
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.437
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.156
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.497
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.497
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:39 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 43.717 | 90.957 | 37.553 | 43.717 |  nan  |  nan  |
+[32m[01/03 21:37:39 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 48.02006986778935, 'AP50': 90.95672726956, 'AP75': 38.58435517481453, 'APs': 48.02006986778935, 'APm': nan, 'APl': nan}), ('segm', {'AP': 43.71730398708767, 'AP50': 90.95672726956, 'AP75': 37.55346101965374, 'APs': 43.71730398708767, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wind 5 Test Set====
+[32m[01/03 21:37:39 d2.data.datasets.coco]: [0mLoaded 58 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/Wind_5.json
+[32m[01/03 21:37:39 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 147          |
+|            |              |[0m
+[32m[01/03 21:37:39 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:39 d2.data.common]: [0mSerializing 58 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:39 d2.data.common]: [0mSerialized dataset takes 0.04 MiB
+[32m[01/03 21:37:39 d2.evaluation.evaluator]: [0mStart inference on 58 batches
+[32m[01/03 21:37:41 d2.evaluation.evaluator]: [0mInference done 18/58. Dataloading: 0.0009 s/iter. Inference: 0.0789 s/iter. Eval: 0.0022 s/iter. Total: 0.0821 s/iter. ETA=0:00:03
+[32m[01/03 21:37:44 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:04.561050 (0.086058 s / iter per device, on 1 devices)
+[32m[01/03 21:37:44 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:04 (0.078999 s / iter per device, on 1 devices)
+[32m[01/03 21:37:44 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:44 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Wind/Wind_5/coco_instances_results.json
+[32m[01/03 21:37:44 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:44 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:44 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:44 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:44 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.916
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.468
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.244
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.489
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:44 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 49.353 | 91.569 | 46.827 | 49.353 |  nan  |  nan  |
+[32m[01/03 21:37:44 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:44 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:44 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:37:44 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:44 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.438
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.906
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.357
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.438
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.214
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.434
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.485
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.485
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:44 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 43.773 | 90.590 | 35.678 | 43.773 |  nan  |  nan  |
+[32m[01/03 21:37:44 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 49.353256785164575, 'AP50': 91.56893559466248, 'AP75': 46.82706259663739, 'APs': 49.353256785164575, 'APm': nan, 'APl': nan}), ('segm', {'AP': 43.772630394610694, 'AP50': 90.59036562453129, 'AP75': 35.67827710831974, 'APs': 43.772630394610694, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wind 6 Test Set====
+[32m[01/03 21:37:44 d2.data.datasets.coco]: [0mLoaded 37 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/Wind_6.json
+[32m[01/03 21:37:44 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 139          |
+|            |              |[0m
+[32m[01/03 21:37:44 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:44 d2.data.common]: [0mSerializing 37 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:44 d2.data.common]: [0mSerialized dataset takes 0.03 MiB
+[32m[01/03 21:37:44 d2.evaluation.evaluator]: [0mStart inference on 37 batches
+[32m[01/03 21:37:46 d2.evaluation.evaluator]: [0mInference done 13/37. Dataloading: 0.0008 s/iter. Inference: 0.0791 s/iter. Eval: 0.0047 s/iter. Total: 0.0845 s/iter. ETA=0:00:02
+[32m[01/03 21:37:48 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:02.885522 (0.090173 s / iter per device, on 1 devices)
+[32m[01/03 21:37:48 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:02 (0.079138 s / iter per device, on 1 devices)
+[32m[01/03 21:37:48 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:48 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Wind/Wind_6/coco_instances_results.json
+[32m[01/03 21:37:48 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:48 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:48 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:48 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:48 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.580
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.979
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.609
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.580
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.186
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.636
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.642
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.642
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:48 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 58.001 | 97.858 | 60.877 | 58.001 |  nan  |  nan  |
+[32m[01/03 21:37:48 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:48 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:48 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:48 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:48 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.534
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.979
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.489
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.534
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.160
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.601
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.601
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:48 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 53.436 | 97.858 | 48.880 | 53.436 |  nan  |  nan  |
+[32m[01/03 21:37:48 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 58.00074691445369, 'AP50': 97.85845617528783, 'AP75': 60.87724642949862, 'APs': 58.00074691445369, 'APm': nan, 'APl': nan}), ('segm', {'AP': 53.436375379026, 'AP50': 97.85845617528783, 'AP75': 48.88005945477138, 'APs': 53.436375379026, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wind 7 Test Set====
+[32m[01/03 21:37:48 d2.data.datasets.coco]: [0mLoaded 19 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/Wind_7.json
+[32m[01/03 21:37:48 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 54           |
+|            |              |[0m
+[32m[01/03 21:37:48 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:48 d2.data.common]: [0mSerializing 19 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:48 d2.data.common]: [0mSerialized dataset takes 0.01 MiB
+[32m[01/03 21:37:48 d2.evaluation.evaluator]: [0mStart inference on 19 batches
+[32m[01/03 21:37:50 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:01.275783 (0.091127 s / iter per device, on 1 devices)
+[32m[01/03 21:37:50 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:01 (0.078997 s / iter per device, on 1 devices)
+[32m[01/03 21:37:50 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:50 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Wind/Wind_7/coco_instances_results.json
+[32m[01/03 21:37:50 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:50 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:50 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:50 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:50 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.558
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.995
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.572
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.558
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.224
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.607
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.607
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:50 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 55.750 | 99.504 | 57.241 | 55.750 |  nan  |  nan  |
+[32m[01/03 21:37:50 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:50 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:50 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:50 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:50 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.511
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.995
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.441
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.511
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.206
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.531
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:50 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 51.063 | 99.504 | 44.079 | 51.063 |  nan  |  nan  |
+[32m[01/03 21:37:50 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 55.750253124517954, 'AP50': 99.50423989767397, 'AP75': 57.2409623220726, 'APs': 55.750253124517954, 'APm': nan, 'APl': nan}), ('segm', {'AP': 51.06296763448675, 'AP50': 99.50423989767397, 'AP75': 44.07929260579231, 'APs': 51.06296763448675, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wind 8 Test Set====
+[32m[01/03 21:37:50 d2.data.datasets.coco]: [0mLoaded 10 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/Wind_8.json
+[32m[01/03 21:37:50 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 36           |
+|            |              |[0m
+[32m[01/03 21:37:50 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:50 d2.data.common]: [0mSerializing 10 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:50 d2.data.common]: [0mSerialized dataset takes 0.01 MiB
+[32m[01/03 21:37:50 d2.evaluation.evaluator]: [0mStart inference on 10 batches
+[32m[01/03 21:37:51 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:00.518832 (0.103766 s / iter per device, on 1 devices)
+[32m[01/03 21:37:51 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:00 (0.078841 s / iter per device, on 1 devices)
+[32m[01/03 21:37:51 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:37:51 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Wind/Wind_8/coco_instances_results.json
+[32m[01/03 21:37:51 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:51 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:37:51 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:51 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:51 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.588
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.944
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.741
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.588
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.206
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.644
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.644
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.644
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:51 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 58.841 | 94.423 | 74.124 | 58.841 |  nan  |  nan  |
+[32m[01/03 21:37:51 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:37:51 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:37:51 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.00 seconds.
+[32m[01/03 21:37:51 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:37:51 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.493
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.944
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.438
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.493
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.172
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:37:51 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 49.253 | 94.423 | 43.768 | 49.253 |  nan  |  nan  |
+[32m[01/03 21:37:51 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 58.841201517285945, 'AP50': 94.42297400218193, 'AP75': 74.12432827843934, 'APs': 58.841201517285945, 'APm': nan, 'APl': nan}), ('segm', {'AP': 49.252816953191726, 'AP50': 94.42297400218193, 'AP75': 43.76840408543835, 'APs': 49.252816953191726, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wind 1-4 Test Set====
+[32m[01/03 21:37:51 d2.data.datasets.coco]: [0mLoaded 166 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/wind_14.json
+[32m[01/03 21:37:51 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 376          |
+|            |              |[0m
+[32m[01/03 21:37:51 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:37:51 d2.data.common]: [0mSerializing 166 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:37:51 d2.data.common]: [0mSerialized dataset takes 0.10 MiB
+[32m[01/03 21:37:51 d2.evaluation.evaluator]: [0mStart inference on 166 batches
+[32m[01/03 21:37:52 d2.evaluation.evaluator]: [0mInference done 11/166. Dataloading: 0.0008 s/iter. Inference: 0.0791 s/iter. Eval: 0.0035 s/iter. Total: 0.0833 s/iter. ETA=0:00:12
+[32m[01/03 21:37:57 d2.evaluation.evaluator]: [0mInference done 71/166. Dataloading: 0.0010 s/iter. Inference: 0.0789 s/iter. Eval: 0.0037 s/iter. Total: 0.0837 s/iter. ETA=0:00:07
+[32m[01/03 21:38:02 d2.evaluation.evaluator]: [0mInference done 129/166. Dataloading: 0.0010 s/iter. Inference: 0.0790 s/iter. Eval: 0.0051 s/iter. Total: 0.0851 s/iter. ETA=0:00:03
+[32m[01/03 21:38:06 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:13.742353 (0.085356 s / iter per device, on 1 devices)
+[32m[01/03 21:38:06 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:12 (0.078934 s / iter per device, on 1 devices)
+[32m[01/03 21:38:06 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:38:06 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Wind/Wind_14/coco_instances_results.json
+[32m[01/03 21:38:06 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:38:06 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:38:06 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:38:06 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:38:06 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.483
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.907
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.455
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.483
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.266
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.523
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.548
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.548
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:38:06 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 48.332 | 90.707 | 45.459 | 48.332 |  nan  |  nan  |
+[32m[01/03 21:38:06 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:38:06 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:38:06 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.02 seconds.
+[32m[01/03 21:38:06 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:38:06 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.446
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.907
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.391
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.446
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.251
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.485
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.511
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.511
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:38:06 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 44.585 | 90.724 | 39.109 | 44.585 |  nan  |  nan  |
+[32m[01/03 21:38:06 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 48.33203328523089, 'AP50': 90.70749355587313, 'AP75': 45.45918473550766, 'APs': 48.33203328523089, 'APm': nan, 'APl': nan}), ('segm', {'AP': 44.58461528841403, 'AP50': 90.72408135243192, 'AP75': 39.10861334190008, 'APs': 44.58461528841403, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wind 5-8 Test Set====
+[32m[01/03 21:38:06 d2.data.datasets.coco]: [0mLoaded 124 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/wind_58.json
+[32m[01/03 21:38:06 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:38:06 d2.data.common]: [0mSerializing 124 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:38:06 d2.data.common]: [0mSerialized dataset takes 0.09 MiB
+[32m[01/03 21:38:06 d2.evaluation.evaluator]: [0mStart inference on 124 batches
+[32m[01/03 21:38:08 d2.evaluation.evaluator]: [0mInference done 18/124. Dataloading: 0.0009 s/iter. Inference: 0.0789 s/iter. Eval: 0.0025 s/iter. Total: 0.0824 s/iter. ETA=0:00:08
+[32m[01/03 21:38:13 d2.evaluation.evaluator]: [0mInference done 77/124. Dataloading: 0.0010 s/iter. Inference: 0.0789 s/iter. Eval: 0.0047 s/iter. Total: 0.0847 s/iter. ETA=0:00:03
+[32m[01/03 21:38:17 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:10.330386 (0.086810 s / iter per device, on 1 devices)
+[32m[01/03 21:38:17 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:09 (0.078991 s / iter per device, on 1 devices)
+[32m[01/03 21:38:17 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:38:17 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Wind/Wind_58/coco_instances_results.json
+[32m[01/03 21:38:17 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:38:17 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:38:17 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:38:17 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:38:17 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.539
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.946
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.555
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.539
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.216
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.570
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:38:17 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 53.862 | 94.550 | 55.463 | 53.862 |  nan  |  nan  |
+[32m[01/03 21:38:17 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:38:17 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:38:17 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:38:17 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:38:17 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.484
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.945
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.413
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.484
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.189
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.519
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.546
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.546
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:38:17 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 48.445 | 94.527 | 41.285 | 48.445 |  nan  |  nan  |
+[32m[01/03 21:38:17 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 53.86179760729048, 'AP50': 94.55039856854526, 'AP75': 55.46273917014371, 'APs': 53.86179760729048, 'APm': nan, 'APl': nan}), ('segm', {'AP': 48.44454253972666, 'AP50': 94.52678925078824, 'AP75': 41.28530640219863, 'APs': 48.44454253972666, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wave 0-3 Test Set====
+[32m[01/03 21:38:17 d2.data.datasets.coco]: [0mLoaded 126 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/WMO_023.json
+[32m[01/03 21:38:17 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 331          |
+|            |              |[0m
+[32m[01/03 21:38:17 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:38:17 d2.data.common]: [0mSerializing 126 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:38:17 d2.data.common]: [0mSerialized dataset takes 0.09 MiB
+[32m[01/03 21:38:17 d2.evaluation.evaluator]: [0mStart inference on 126 batches
+[32m[01/03 21:38:18 d2.evaluation.evaluator]: [0mInference done 11/126. Dataloading: 0.0008 s/iter. Inference: 0.0790 s/iter. Eval: 0.0023 s/iter. Total: 0.0821 s/iter. ETA=0:00:09
+[32m[01/03 21:38:23 d2.evaluation.evaluator]: [0mInference done 70/126. Dataloading: 0.0010 s/iter. Inference: 0.0790 s/iter. Eval: 0.0055 s/iter. Total: 0.0856 s/iter. ETA=0:00:04
+[32m[01/03 21:38:28 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:10.447976 (0.086347 s / iter per device, on 1 devices)
+[32m[01/03 21:38:28 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:09 (0.078989 s / iter per device, on 1 devices)
+[32m[01/03 21:38:28 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:38:28 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/WMO/WMO_023/coco_instances_results.json
+[32m[01/03 21:38:28 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:38:28 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:38:28 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.07 seconds.
+[32m[01/03 21:38:28 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:38:28 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.451
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.897
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.379
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.451
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.218
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.461
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.515
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.515
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:38:28 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 45.077 | 89.679 | 37.873 | 45.077 |  nan  |  nan  |
+[32m[01/03 21:38:28 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:38:28 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:38:28 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:38:28 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:38:28 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.413
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.895
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.329
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.413
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.206
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.425
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.477
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.477
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:38:28 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 41.300 | 89.510 | 32.917 | 41.300 |  nan  |  nan  |
+[32m[01/03 21:38:28 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 45.076604491135235, 'AP50': 89.67861554674947, 'AP75': 37.87337236146963, 'APs': 45.076604491135235, 'APm': nan, 'APl': nan}), ('segm', {'AP': 41.300198294071144, 'AP50': 89.5103854743551, 'AP75': 32.91690742703474, 'APs': 41.300198294071144, 'APm': nan, 'APl': nan})])
+====Start Evaluation on Wave 4-6 Test Set====
+[32m[01/03 21:38:28 d2.data.datasets.coco]: [0mLoaded 164 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/WMO_456.json
+[32m[01/03 21:38:28 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 421          |
+|            |              |[0m
+[32m[01/03 21:38:28 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:38:28 d2.data.common]: [0mSerializing 164 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:38:28 d2.data.common]: [0mSerialized dataset takes 0.11 MiB
+[32m[01/03 21:38:28 d2.evaluation.evaluator]: [0mStart inference on 164 batches
+[32m[01/03 21:38:29 d2.evaluation.evaluator]: [0mInference done 11/164. Dataloading: 0.0008 s/iter. Inference: 0.0786 s/iter. Eval: 0.0020 s/iter. Total: 0.0814 s/iter. ETA=0:00:12
+[32m[01/03 21:38:34 d2.evaluation.evaluator]: [0mInference done 71/164. Dataloading: 0.0010 s/iter. Inference: 0.0789 s/iter. Eval: 0.0038 s/iter. Total: 0.0838 s/iter. ETA=0:00:07
+[32m[01/03 21:38:39 d2.evaluation.evaluator]: [0mInference done 129/164. Dataloading: 0.0010 s/iter. Inference: 0.0790 s/iter. Eval: 0.0055 s/iter. Total: 0.0855 s/iter. ETA=0:00:02
+[32m[01/03 21:38:43 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:13.684620 (0.086067 s / iter per device, on 1 devices)
+[32m[01/03 21:38:43 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:12 (0.078957 s / iter per device, on 1 devices)
+[32m[01/03 21:38:43 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:38:43 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/WMO/WMO_456/coco_instances_results.json
+[32m[01/03 21:38:43 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:38:43 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:38:43 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:38:43 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:38:43 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.558
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.956
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.601
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.558
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.259
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.614
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.620
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.620
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:38:43 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 55.820 | 95.605 | 60.056 | 55.820 |  nan  |  nan  |
+[32m[01/03 21:38:43 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:38:43 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:38:43 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.02 seconds.
+[32m[01/03 21:38:43 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:38:43 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.505
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.956
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.459
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.505
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.230
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.562
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:38:43 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 50.541 | 95.629 | 45.867 | 50.541 |  nan  |  nan  |
+[32m[01/03 21:38:43 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 55.82018883938827, 'AP50': 95.60467204455082, 'AP75': 60.0557954346143, 'APs': 55.82018883938827, 'APm': nan, 'APl': nan}), ('segm', {'AP': 50.541497757987585, 'AP50': 95.62932686410946, 'AP75': 45.866502514519794, 'APs': 50.541497757987585, 'APm': nan, 'APl': nan})])
+====Start Evaluation on 0-40 Test Set====
+[32m[01/03 21:38:43 d2.data.datasets.coco]: [0mLoaded 103 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/ship_0_40.json
+[32m[01/03 21:38:43 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 191          |
+|            |              |[0m
+[32m[01/03 21:38:43 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:38:43 d2.data.common]: [0mSerializing 103 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:38:43 d2.data.common]: [0mSerialized dataset takes 0.06 MiB
+[32m[01/03 21:38:43 d2.evaluation.evaluator]: [0mStart inference on 103 batches
+[32m[01/03 21:38:44 d2.evaluation.evaluator]: [0mInference done 17/103. Dataloading: 0.0009 s/iter. Inference: 0.0789 s/iter. Eval: 0.0046 s/iter. Total: 0.0845 s/iter. ETA=0:00:07
+[32m[01/03 21:38:49 d2.evaluation.evaluator]: [0mInference done 74/103. Dataloading: 0.0010 s/iter. Inference: 0.0791 s/iter. Eval: 0.0072 s/iter. Total: 0.0875 s/iter. ETA=0:00:02
+[32m[01/03 21:38:52 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:08.704884 (0.088825 s / iter per device, on 1 devices)
+[32m[01/03 21:38:52 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:07 (0.079102 s / iter per device, on 1 devices)
+[32m[01/03 21:38:52 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:38:52 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Size/Size_040/coco_instances_results.json
+[32m[01/03 21:38:52 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:38:52 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:38:52 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:38:52 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:38:52 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.184
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.428
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.104
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.184
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.174
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.429
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.480
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.480
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:38:52 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 18.396 | 42.779 | 10.359 | 18.396 |  nan  |  nan  |
+[32m[01/03 21:38:52 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:38:52 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:38:52 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:38:52 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:38:52 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.176
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.431
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.098
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.176
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.163
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.413
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.468
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.468
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:38:52 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 17.596 | 43.069 | 9.844  | 17.596 |  nan  |  nan  |
+[32m[01/03 21:38:52 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 18.39590273385438, 'AP50': 42.77899913344137, 'AP75': 10.359481818267042, 'APs': 18.39590273385438, 'APm': nan, 'APl': nan}), ('segm', {'AP': 17.59601143006966, 'AP50': 43.069167563532815, 'AP75': 9.84415257066818, 'APs': 17.59601143006966, 'APm': nan, 'APl': nan})])
+====Start Evaluation on 40-65 Test Set====
+[32m[01/03 21:38:52 d2.data.datasets.coco]: [0mLoaded 117 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/ship_40_65.json
+[32m[01/03 21:38:52 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 189          |
+|            |              |[0m
+[32m[01/03 21:38:52 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:38:52 d2.data.common]: [0mSerializing 117 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:38:52 d2.data.common]: [0mSerialized dataset takes 0.06 MiB
+[32m[01/03 21:38:52 d2.evaluation.evaluator]: [0mStart inference on 117 batches
+[32m[01/03 21:38:55 d2.evaluation.evaluator]: [0mInference done 24/117. Dataloading: 0.0009 s/iter. Inference: 0.0788 s/iter. Eval: 0.0047 s/iter. Total: 0.0844 s/iter. ETA=0:00:07
+[32m[01/03 21:39:00 d2.evaluation.evaluator]: [0mInference done 80/117. Dataloading: 0.0010 s/iter. Inference: 0.0791 s/iter. Eval: 0.0088 s/iter. Total: 0.0889 s/iter. ETA=0:00:03
+[32m[01/03 21:39:03 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:09.925613 (0.088622 s / iter per device, on 1 devices)
+[32m[01/03 21:39:03 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:08 (0.079059 s / iter per device, on 1 devices)
+[32m[01/03 21:39:03 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:39:03 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Size/Size_4065/coco_instances_results.json
+[32m[01/03 21:39:03 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:39:03 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:39:03 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:39:03 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:39:03 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.213
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.417
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.178
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.213
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.228
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.507
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.548
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.548
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:39:03 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 21.267 | 41.736 | 17.752 | 21.267 |  nan  |  nan  |
+[32m[01/03 21:39:03 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:39:03 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:39:03 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:39:03 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:39:03 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.191
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.421
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.130
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.191
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.206
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.456
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.492
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.492
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:39:03 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 19.109 | 42.120 | 12.971 | 19.109 |  nan  |  nan  |
+[32m[01/03 21:39:03 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 21.266904029235075, 'AP50': 41.73564271913411, 'AP75': 17.752009502852257, 'APs': 21.266904029235075, 'APm': nan, 'APl': nan}), ('segm', {'AP': 19.108514451060078, 'AP50': 42.120090257183065, 'AP75': 12.970683326018447, 'APs': 19.108514451060078, 'APm': nan, 'APl': nan})])
+====Start Evaluation on 65-105 Test Set====
+[32m[01/03 21:39:03 d2.data.datasets.coco]: [0mLoaded 121 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/ship_65_105.json
+[32m[01/03 21:39:03 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 184          |
+|            |              |[0m
+[32m[01/03 21:39:03 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:39:03 d2.data.common]: [0mSerializing 121 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:39:03 d2.data.common]: [0mSerialized dataset takes 0.06 MiB
+[32m[01/03 21:39:03 d2.evaluation.evaluator]: [0mStart inference on 121 batches
+[32m[01/03 21:39:05 d2.evaluation.evaluator]: [0mInference done 17/121. Dataloading: 0.0009 s/iter. Inference: 0.0788 s/iter. Eval: 0.0032 s/iter. Total: 0.0829 s/iter. ETA=0:00:08
+[32m[01/03 21:39:10 d2.evaluation.evaluator]: [0mInference done 73/121. Dataloading: 0.0011 s/iter. Inference: 0.0791 s/iter. Eval: 0.0083 s/iter. Total: 0.0885 s/iter. ETA=0:00:04
+[32m[01/03 21:39:14 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:10.253916 (0.088396 s / iter per device, on 1 devices)
+[32m[01/03 21:39:14 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:09 (0.079088 s / iter per device, on 1 devices)
+[32m[01/03 21:39:14 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:39:14 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Size/Size_65105/coco_instances_results.json
+[32m[01/03 21:39:14 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:39:14 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:39:14 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:39:14 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:39:14 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.268
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.472
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.287
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.268
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.241
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.578
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.578
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:39:14 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 26.797 | 47.232 | 28.746 | 26.797 |  nan  |  nan  |
+[32m[01/03 21:39:14 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:39:14 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:39:14 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:39:14 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:39:14 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.250
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.471
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.226
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.250
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.230
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.539
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:39:14 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 24.978 | 47.098 | 22.564 | 24.978 |  nan  |  nan  |
+[32m[01/03 21:39:14 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 26.79683765615129, 'AP50': 47.23157071832718, 'AP75': 28.746023583244224, 'APs': 26.79683765615129, 'APm': nan, 'APl': nan}), ('segm', {'AP': 24.97765934766943, 'AP50': 47.09809651375178, 'AP75': 22.563627776380695, 'APs': 24.97765934766943, 'APm': nan, 'APl': nan})])
+====Start Evaluation on 105~ Test Set====
+[32m[01/03 21:39:14 d2.data.datasets.coco]: [0mLoaded 112 images in COCO format from /home/eorslab/fatcat/SAR_DATASET/TSSWD/annotation/test/coco/annotation/ship_105.json
+[32m[01/03 21:39:14 d2.data.build]: [0mDistribution of instances among all 1 categories:
+[36m|  category  | #instances   |
+|:----------:|:-------------|
+|    ship    | 188          |
+|            |              |[0m
+[32m[01/03 21:39:14 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[32m[01/03 21:39:14 d2.data.common]: [0mSerializing 112 elements to byte tensors and concatenating them all ...
+[32m[01/03 21:39:14 d2.data.common]: [0mSerialized dataset takes 0.06 MiB
+[32m[01/03 21:39:14 d2.evaluation.evaluator]: [0mStart inference on 112 batches
+[32m[01/03 21:39:15 d2.evaluation.evaluator]: [0mInference done 11/112. Dataloading: 0.0006 s/iter. Inference: 0.0789 s/iter. Eval: 0.0027 s/iter. Total: 0.0822 s/iter. ETA=0:00:08
+[32m[01/03 21:39:20 d2.evaluation.evaluator]: [0mInference done 68/112. Dataloading: 0.0010 s/iter. Inference: 0.0791 s/iter. Eval: 0.0081 s/iter. Total: 0.0883 s/iter. ETA=0:00:03
+[32m[01/03 21:39:24 d2.evaluation.evaluator]: [0mTotal inference time: 0:00:09.478075 (0.088580 s / iter per device, on 1 devices)
+[32m[01/03 21:39:24 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:00:08 (0.079055 s / iter per device, on 1 devices)
+[32m[01/03 21:39:24 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[01/03 21:39:24 d2.evaluation.coco_evaluation]: [0mSaving results to ./weather_test_final/Size/Size_105/coco_instances_results.json
+[32m[01/03 21:39:24 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:39:24 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[01/03 21:39:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:39:24 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:39:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.454
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.694
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.547
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.454
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.321
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.684
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.693
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.693
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:39:24 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 45.395 | 69.405 | 54.733 | 45.395 |  nan  |  nan  |
+[32m[01/03 21:39:24 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[32m[01/03 21:39:24 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *segm*
+[32m[01/03 21:39:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 0.01 seconds.
+[32m[01/03 21:39:24 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[01/03 21:39:24 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.395
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.690
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.436
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.395
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.281
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.603
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.610
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.610
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+[32m[01/03 21:39:24 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm  |  APl  |
+|:------:|:------:|:------:|:------:|:-----:|:-----:|
+| 39.544 | 69.040 | 43.558 | 39.544 |  nan  |  nan  |
+[32m[01/03 21:39:24 d2.evaluation.coco_evaluation]: [0mSome metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 45.395392008571136, 'AP50': 69.4046746033131, 'AP75': 54.73284351186292, 'APs': 45.395392008571136, 'APm': nan, 'APl': nan}), ('segm', {'AP': 39.54376463180845, 'AP50': 69.03977252122061, 'AP75': 43.55784521781026, 'APs': 39.54376463180845, 'APm': nan, 'APl': nan})])
+====ALL TEST DONE in 229.25 sec====
+
+============================ Messages from Goddess ============================
+ * Job ended at     : Tue Jan 3 21:39:26 CST 2023
+===============================================================================
+
