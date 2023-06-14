@@ -26,15 +26,15 @@ The Object Detection / Instance Segmentation Models are list bellow. **Bold** re
 | Mask R-CNN, YOLOV5, CenterMask | Nvidia Tesla V100 32G, Nvida RTX 2080Ti 12G | Provide by [NTUCE-NCREE AI Research Center](http://www.aiengineer.tw/) |
 | Rest of them | Nvidia GTX 1060 6G | Home PC |
 
-* **Mask R-CNN-X152** -- [log](/logfile/x152/cout_x152_ship_test.txt)
-* **Mask R-CNN-X101** -- [log](/logfile/x101/cout_x101_tsswd.txt)
-* **Mask R-CNN-101** -- [log](/logfile/r101/cout_r101_tsswd.txt)
-* **CenterMask-V99** -- [log](/logfile/v99/cout_v99_tsswd.txt)
-* **CenterMask-V57** -- [log](/logfile/v57/cout_v57_tsswd.txt)
+* **Mask R-CNN-X152** -- [log](/logfile/x152)
+* **Mask R-CNN-X101** -- [log](/logfile/x101)
+* **Mask R-CNN-101** -- [log](/logfile/r101)
+* **CenterMask-V99** -- [log](/logfile/v99)
+* **CenterMask-V57** -- [log](/logfile/v57)
 * YOLOV5-l -- [log](/logfile/yolov5-l)
-* YOLOV5-l6 -- [log](/logfile/x152)
-* YOLOV5-x -- [log](/logfile/x152)
-* YOLOV5-x6 -- [log](/logfile/x152)
+* YOLOV5-l6 -- [log](/logfile/yolov5-l6)
+* YOLOV5-x -- [log](/logfile/yolov5-x)
+* YOLOV5-x6 -- [log](/logfile/yolov5-x6)
 * PPYOLO
 * HRNET
 * TOOD
