@@ -7,12 +7,15 @@ Here's why you should use our dataset:
 * We only use **Sentinel-1** as our image source, no mixed-source satellite, which is more common practice in Remote Sensing Field.
 * The ship size in our dataset is smaller than previous dataset, which means it's more challenging :smile:
 
-### Dataset Details
+### Dataset Details ###
+
+We now only provide **Mask-RCNN-X152** and **YOLOV5** model's weight due to the storage limitation.\
+If you need other model weight, please contact us.
 
 |          Satellite          |   Mode   |   Images   |  Ships  |     Size    | Resolution |
 |:---------------------------:|:--------:|:----------:|:-------:|:-----------:|:----------:|
 |          Sentinel-1         |    IW    |    2904    |   8255  |   800x800   |    10 m    |
-|       Annotation Type       | Training | Validation | Testing | Images & Label |  Buoy Data |
+|       Annotation Type       | Training | Validation | Testing | Weights |  Dataset |
 | COCO / VOC / YOLOV4 / YOLOV5 |   2324   |     290    |   290   | [Click Me](https://drive.google.com/drive/folders/187sgcSEF8eRBL3AuWnMjG7rLgs_O4XIr?usp=sharing)            |   [Click Me](https://drive.google.com/drive/folders/1iJI775r_iQzYK1Po1Hgu_cIgTiuqzVdW?usp=sharing)         |
 
 
