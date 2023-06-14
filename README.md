@@ -4,7 +4,7 @@ Taiwan SAR-based Ship and Weather Dataset (TSSWD) is the latest SAR ship dataset
 
 Here's why you should use our dataset:
 * Dataset build up with buoy weather data, i.e. every image has various weather data including **wave height**, **wind speed** ... etc. So not only the dataset can be use in Ship detection, it also got the potential to do sea weather prediction through SAR images!
-* We only use Sentinel-1 as our image source, no mixed-source satellite, which is more common practice in Remote Sensing Field.
+* We only use **Sentinel-1** as our image source, no mixed-source satellite, which is more common practice in Remote Sensing Field.
 * The ship size in our dataset is smaller than previous dataset, which means it's more challenging :smile:
 
 ### Training & Testing Details
@@ -36,7 +36,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 If our work is helpful to your research, please cite us    
 
-`a = {}`
+`cite = {}`
 
 
 <!-- CONTACT -->
