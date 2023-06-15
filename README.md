@@ -1,5 +1,5 @@
 <!-- ABOUT THE PROJECT -->
-## TSSWD
+## TSSWD :ship:
 Taiwan SAR-based Ship and Weather Dataset (TSSWD) is the latest SAR ship dataset combined with weather data. [Link]() to the research paper.
 
 Here's why you should use our dataset:
@@ -7,7 +7,7 @@ Here's why you should use our dataset:
 * We only use **Sentinel-1** as our image source, no mixed-source satellite, which is more common practice in Remote Sensing Field.
 * The ship size in our dataset is smaller than previous dataset, which means it's more challenging :smile:
 
-### Dataset Details ###
+### Dataset Details :green_book:
 
 We now only provide **Mask-RCNN-X152** and **YOLOV5** model's weight due to the storage limitation.\
 If you need other model weight, please contact us.
@@ -21,7 +21,7 @@ If you need other model weight, please contact us.
 
 
 
-### Training & Testing Details
+### Training & Testing Details :muscle:
 
 The Object Detection / Instance Segmentation Models are list bellow. **Bold** represent Instance Segmentation.\
 Training and testing params set in log file.\
@@ -60,6 +60,7 @@ If our work is helpful to your research, use this bibtex to cite this repository
 @article{TSSWD,
   title={TSSWD: Taiwan SAR-based Ship Detection and Weather Dataset},
   author={Shang-Fong, Yang and YaLun, Tsai},
+  keywords={SAR,Ship Detection,Object Detection,Instance Segmentation,Buoy}
   year={2023},
   publisher={},
   journal={},
