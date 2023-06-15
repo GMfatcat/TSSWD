@@ -23,7 +23,11 @@ If you need other model weight, please contact us.
 
 ### Training & Testing Details
 
-The Object Detection / Instance Segmentation Models are list bellow. **Bold** represent Instance Segmentation. Training and testing params set in log file.    
+The Object Detection / Instance Segmentation Models are list bellow. **Bold** represent Instance Segmentation.\
+Training and testing params set in log file.\
+Mask R-CNN use [Detectron2 platform](https://github.com/facebookresearch/detectron2).\
+YOLOV5 and CenterMask use their official github repo.\
+All model trained by GTX 1060 use the [ppdet platform](https://github.com/PaddlePaddle/PaddleDetection)
 | Models | GPU | Notes |
 |---|---|---|
 | Mask R-CNN, YOLOV5, CenterMask | Nvidia Tesla V100 32G, Nvida RTX 2080Ti 12G | Provide by [NTUCE-NCREE AI Research Center](http://www.aiengineer.tw/) |
@@ -42,7 +46,7 @@ The Object Detection / Instance Segmentation Models are list bellow. **Bold** re
 * HRNET -- [log](/logfile/hrnet)
 * TOOD -- [log](/logfile/tood)
 * Cascade R-CNN -- [log](/logfile/cascade-rcnn)
-* Sparse R-CNN -- [log](/logfile/ysparse-rcnn)
+* Sparse R-CNN -- [log](/logfile/sparse-rcnn)
 * Res2Net -- [log](/logfile/res2net)
 * FCOS -- [log](/logfile/fcos)
 
