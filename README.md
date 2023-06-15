@@ -38,13 +38,13 @@ The Object Detection / Instance Segmentation Models are list bellow. **Bold** re
 * YOLOV5-l6 -- [log](/logfile/yolov5-l6)
 * YOLOV5-x -- [log](/logfile/yolov5-x)
 * YOLOV5-x6 -- [log](/logfile/yolov5-x6)
-* PPYOLO
-* HRNET
-* TOOD
-* Cascade R-CNN
-* Sparse R-CNN
-* Res2Net
-* FCOS
+* PPYOLO -- [log](/logfile/ppyolo)
+* HRNET -- [log](/logfile/hrnet)
+* TOOD -- [log](/logfile/tood)
+* Cascade R-CNN -- [log](/logfile/cascade-rcnn)
+* Sparse R-CNN -- [log](/logfile/ysparse-rcnn)
+* Res2Net -- [log](/logfile/res2net)
+* FCOS -- [log](/logfile/fcos)
 
 <!-- LICENSE -->
 ## License & Citation
