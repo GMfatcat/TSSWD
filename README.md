@@ -47,6 +47,25 @@ All model trained by GTX 1060 use the [ppdet platform](https://github.com/Paddle
 * Res2Net -- [log](/logfile/res2net)
 * FCOS -- [log](/logfile/fcos)
 
+|      Model      | Bbox mAP | Bbox mAP50 | Seg mAP | Seg mAP50 |
+|:---------------:|:--------:|:----------:|:-------:|:---------:|
+| Mask R-CNN-r101 |  49.475  |   90.672   |  43.753 |   90.581  |
+| Mask R-CNN-x101 |  48.732  |   90.835   |  45.247 |   92.047  |
+| Mask R-CNN-x152 |  51.211  |   93.061   |  46.512 |   93.04   |
+|  CenterMask-V99 |  47.024  |    86.21   |  43.726 |   87.736  |
+|  CenterMask-V57 |  47.168  |   85.929   |  43.468 |   86.861  |
+|    YOLO V5-l    |   54.8   |    94.9    |    x    |     x     |
+|    YOLO V5-l6   |   55.4   |    93.7    |    x    |     x     |
+|    YOLO V5-x    |   55.5   |    94.8    |    x    |     x     |
+|    YOLO V5-x6   |   52.9   |    95.1    |    x    |     x     |
+|      PPYOLO     |    49    |    91.9    |    x    |     x     |
+|      HRNET      |    49    |     91     |    x    |     x     |
+|       TOOD      |   42.9   |    79.3    |    x    |     x     |
+|  Cascade R-CNN  |    50    |    90.5    |    x    |     x     |
+|   Sparse R-CNN  |   44.9   |    86.3    |    x    |     x     |
+|     Res2Net     |   49.6   |    91.1    |    x    |     x     |
+|       FCOS      |   43.6   |    80.3    |    x    |     x     |
+
 <!-- LICENSE -->
 ## License & Citations
 
