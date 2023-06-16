@@ -49,7 +49,7 @@ All model trained by GTX 1060 use the [ppdet platform](https://github.com/Paddle
 
 |      Model      | Bbox mAP | Bbox mAP50 | Seg mAP | Seg mAP50 |
 |:---------------:|:--------:|:----------:|:-------:|:---------:|
-| Mask R-CNN-r101 |  49.475  |   90.672   |  43.753 |   90.581  |
+| **Mask R-CNN-r101** |  49.475  |   90.672   |  43.753 |   90.581  |
 | Mask R-CNN-x101 |  48.732  |   90.835   |  45.247 |   92.047  |
 | Mask R-CNN-x152 |  51.211  |   93.061   |  46.512 |   93.04   |
 |  CenterMask-V99 |  47.024  |    86.21   |  43.726 |   87.736  |
