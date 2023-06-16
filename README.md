@@ -48,7 +48,7 @@ All model trained by GTX 1060 use the [ppdet platform](https://github.com/Paddle
 * FCOS -- [log](/logfile/fcos)
 
 <!-- LICENSE -->
-## License & Citation
+## License & Citations
 
 Distributed under the MIT License. See `LICENSE` for more information.    
 
