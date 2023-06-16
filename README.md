@@ -66,7 +66,7 @@ All model trained by GTX 1060 use the [ppdet platform](https://github.com/Paddle
 |     Res2Net     |   49.6   |    91.1    |    x    |     x     |
 |       FCOS      |   43.6   |    80.3    |    x    |     x     |
 
-![Prediction Examples](/img/Model Predict Example.jpg)
+![Prediction Examples](./img/Model_Predict_Example.jpg)
 
 <!-- LICENSE -->
 ## License & Citations
