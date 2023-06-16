@@ -30,23 +30,6 @@ All model trained by GTX 1060 use the [ppdet platform](https://github.com/Paddle
 | Mask R-CNN, YOLOV5, CenterMask | Nvidia Tesla V100 32G, Nvida RTX 2080Ti 12G | Provide by [NTUCE-NCREE AI Research Center](http://www.aiengineer.tw/) |
 | Rest of them | Nvidia GTX 1060 6G | Home PC |
 
-* **Mask R-CNN-X152** -- [log](/logfile/x152)
-* **Mask R-CNN-X101** -- [log](/logfile/x101)
-* **Mask R-CNN-101** -- [log](/logfile/r101)
-* **CenterMask-V99** -- [log](/logfile/v99)
-* **CenterMask-V57** -- [log](/logfile/v57)
-* YOLOV5-l -- [log](/logfile/yolov5-l)
-* YOLOV5-l6 -- [log](/logfile/yolov5-l6)
-* YOLOV5-x -- [log](/logfile/yolov5-x)
-* YOLOV5-x6 -- [log](/logfile/yolov5-x6)
-* PPYOLO -- [log](/logfile/ppyolo)
-* HRNET -- [log](/logfile/hrnet)
-* TOOD -- [log](/logfile/tood)
-* Cascade R-CNN -- [log](/logfile/cascade-rcnn)
-* Sparse R-CNN -- [log](/logfile/sparse-rcnn)
-* Res2Net -- [log](/logfile/res2net)
-* FCOS -- [log](/logfile/fcos)
-
 |      Model      | Bbox mAP | Bbox mAP50 | Seg mAP | Seg mAP50 | log |
 |:---------------:|:--------:|:----------:|:-------:|:---------:|:---:|
 | **Mask R-CNN-r101** |  49.475  |   90.672   |  43.753 |   90.581  |[log](/logfile/r101)|
