@@ -57,6 +57,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 If our work is helpful to your research, use this bibtex to cite this repository:
 ```
+@misc{TSSWD,
+  title={TSSWD: Taiwan SAR-based Ship Detection and Weather Dataset},
+  author={Shang-Fong, Yang and YaLun, Tsai},
+  year={2023},
+  publisher={Github},
+  journal={GitHub repository},
+  howpublished={\url{https://github.com/GMfatcat/TSSWD}}
+}
+```
+
+use this citation if the article is published (not yet):
+```
 @article{TSSWD,
   title={TSSWD: Taiwan SAR-based Ship Detection and Weather Dataset},
   author={Shang-Fong, Yang and YaLun, Tsai},
