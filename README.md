@@ -48,7 +48,7 @@ All model trained by GTX 1060 use the [ppdet platform](https://github.com/Paddle
 * FCOS -- [log](/logfile/fcos)
 
 |      Model      | Bbox mAP | Bbox mAP50 | Seg mAP | Seg mAP50 | log |
-|:---------------:|:--------:|:----------:|:-------:|:---------:|
+|:---------------:|:--------:|:----------:|:-------:|:---------:|:---:|
 | **Mask R-CNN-r101** |  49.475  |   90.672   |  43.753 |   90.581  |[log](/logfile/r101)|
 | Mask R-CNN-x101 |  48.732  |   90.835   |  45.247 |   92.047  ||
 | Mask R-CNN-x152 |  51.211  |   93.061   |  46.512 |   93.04   ||
