@@ -27,7 +27,7 @@ YOLOV5 and CenterMask use their official github repo.\
 All model trained by GTX 1060 use the [ppdet platform](https://github.com/PaddlePaddle/PaddleDetection)
 | Models | GPU | Notes |
 |---|---|---|
-| Mask R-CNN, YOLOV5, CenterMask | Nvidia Tesla V100 32G, Nvida RTX 2080Ti 12G | Provide by [NTUCE-NCREE AI Research Center](http://www.aiengineer.tw/) |
+| Mask R-CNN, YOLOV5, CenterMask | Nvidia Tesla V100 32G <br /> Nvida RTX 2080Ti 12G | Provide by [NTUCE-NCREE AI Research Center](http://www.aiengineer.tw/) |
 | Rest of them | Nvidia GTX 1060 6G | Home PC |
 
 |      Model      | Bbox mAP | Bbox mAP50 | Seg mAP | Seg mAP50 | log |
