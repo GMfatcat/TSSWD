@@ -18,9 +18,6 @@ If you need other model weight, please contact us.
 |       Annotation Type       | Training | Validation | Testing | Weights |  Dataset |
 | COCO / VOC / YOLOV4 / YOLOV5 |   2324   |     290    |   290   | [Click Me](https://drive.google.com/drive/folders/187sgcSEF8eRBL3AuWnMjG7rLgs_O4XIr?usp=sharing)            |   [Click Me](https://drive.google.com/drive/folders/1iJI775r_iQzYK1Po1Hgu_cIgTiuqzVdW?usp=sharing)         |
 
-
-
-
 ### Training & Testing Details :muscle:
 
 The Object Detection / Instance Segmentation Models are list bellow. **Bold** represent Instance Segmentation.\
