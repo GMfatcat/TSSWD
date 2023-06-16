@@ -1,6 +1,6 @@
 <!-- ABOUT THE PROJECT -->
 ## TSSWD :ship:
-Taiwan SAR-based Ship and Weather Dataset (TSSWD) is the latest SAR ship dataset combined with weather data. [Link]() to the research paper.
+Taiwan SAR-based Ship and Weather Dataset (TSSWD) is the latest SAR ship dataset combined with weather data. [Link](/img/BUOY.jpg) to the buoy stations map. [Link]() to the research paper.
 
 Here's why you should use our dataset:
 * Dataset build up with buoy weather data, i.e. every image has various weather data including **wave height**, **wind speed** ... etc. So not only the dataset can be use in Ship detection, it also got the potential to do sea weather prediction through SAR images!
